@@ -37,11 +37,11 @@ kubectl mb -v
 
 ```bash
 # 查看Deployment的image信息
-kubemb image -n default
+kubectl mb image -n default
 
 NAMESPACE	DEPLOY_NAME		CONTAINER_NAME		IMAGE
-default		php-apache		php-apache			k8s.gcr.io/hpa-example
-default		podinfo			podinfod			stefanprodan/podinfo:0.0.1
+default		php-apache		php-apache	        k8s.gcr.io/hpa-example
+default		podinfo			podinfod	        stefanprodan/podinfo:0.0.1
 default		sample-app		metrics-provider	luxas/autoscale-demo:v0.1.2
 ```
 
@@ -51,12 +51,12 @@ default		sample-app		metrics-provider	luxas/autoscale-demo:v0.1.2
 
 ```bash
 # 查看Deployment的资源信息
-kubemb cap -n default
+kubectl mb cap -n default
 
 NAMESPACE	CONTAINER NAME			CPU REQUESTS	MEMORY REQUESTS	CPU LIMITS	MEMORY LIMITS
-default		php-apache				200m			0				500m		0
-default		podinfod				1m				32Mi			100m		256Mi
-default		metrics-provider		0				0				0			0
+default		php-apache			200m		0		500m		0
+default		podinfod			1m		32Mi		100m		256Mi
+default		metrics-provider	        0		0		0		0
 ```
 
 
